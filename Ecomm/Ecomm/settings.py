@@ -117,8 +117,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR/'media'
+LOGIN_REDIRECT_URL = '/profile/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+STRIPE_KEY_ID = "pk_test_51MYPUxGh9Ruj27FTfeJciWUGCxEExrBueY3nlA4p5b7R2QHSJJGIfHP0vRCaQzrt3xxT8umKZH8kWYdVAhdhFDM300gny8X6rl"
+STRIPE_KEY_SECRET = "sk_test_51MYPUxGh9Ruj27FTJlpgxm3lXWNBeOaiDfT8Y3WMLHhn3ALsyBLHtxEJz4txNZvYBVAawNSU5SS0NHEFcwtjY1rU00E3qz9MmH"
